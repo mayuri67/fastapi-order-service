@@ -78,8 +78,7 @@ pipeline {
                 ]) {
 
                     sh '''
-                    git clone https://${GIT_USERNAME}:${GIT_TOKEN}@github.com/YOUR_USERNAME/order-service-gitops.git gitops
-
+                    git clone https://github.com/mayuri67/order-service-gitops.git
                     cd gitops
 
                     sed -i "s/tag: .*/tag: ${IMAGE_TAG}/" helm/order-service/values.yaml
