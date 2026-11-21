@@ -71,7 +71,7 @@ pipeline {
             steps {
                 withCredentials([
                     usernamePassword(
-                        credentialsId: 'dockerhub-creds',
+                        credentialsId: 'github-creds',
                         usernameVariable: 'GIT_USERNAME',
                         passwordVariable: 'GIT_TOKEN'
                     )
@@ -88,7 +88,7 @@ pipeline {
 
                     git add .
                     git commit -m "Update order-service image to ${IMAGE_TAG}" || true
-                    git push origin main
+                    git push https://${GIT_USERNAME}:${GIT_TOKEN}@github.com/mayuri67/order-service-gitops.git HEAD:main
                     '''
                 }
             }
