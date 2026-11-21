@@ -7,7 +7,7 @@ pipeline {
         IMAGE_NAME = "fastapi-order-service"
         IMAGE_TAG = "${BUILD_NUMBER}"
 
-        GITOPS_REPO = "https://github.com/YOUR_USERNAME/order-service-gitops.git"
+        GITOPS_REPO = "https://github.com/mayuri67/order-service-gitops.git"
     }
 
     stages {
@@ -15,7 +15,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/YOUR_USERNAME/fastapi-order-service.git'
+                    url: 'https://github.com/mayuri67/fastapi-order-service.git'
             }
         }
 
