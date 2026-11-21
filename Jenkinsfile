@@ -79,7 +79,7 @@ pipeline {
 
                     sh '''
                     git clone https://github.com/mayuri67/order-service-gitops.git
-                    cd gitops
+                    cd order-service-gitops
 
                     sed -i "s/tag: .*/tag: ${IMAGE_TAG}/" helm/order-service/values.yaml
 
