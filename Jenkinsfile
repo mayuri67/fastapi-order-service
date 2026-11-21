@@ -5,7 +5,7 @@ pipeline {
     environment {
         DOCKER_USER = "mayuri67"
         IMAGE_NAME = "fastapi-order-service"
-        IMAGE_TAG = "${BUILD_NUMBER}"
+        IMAGE_TAG = "latest"
 
         GITOPS_REPO = "https://github.com/mayuri67/order-service-gitops.git"
     }
